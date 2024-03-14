@@ -24,8 +24,8 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <Border BackgroundColor="{StaticResource Primary}"
-                    Stroke="{StaticResource Primary}"
+            <!--<Border BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
+                    Stroke="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
                     StrokeShape="RoundRectangle 10"
                     Padding="10"
                     HorizontalOptions="Fill"
@@ -48,7 +48,21 @@
                            VerticalOptions="Center"
                            x:Name="CounterBtn" />
                 </HorizontalStackLayout>
-            </Border>
+            </Border>-->
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill"
+                ContentLayout="Left, 10">
+                <Button.ImageSource>
+                    <FontImageSource FontFamily="FluentIcons"
+                                     Glyph="&#xe452;"/>
+                </Button.ImageSource>
+            </Button>
+
         </VerticalStackLayout>
     </ScrollView>
 
